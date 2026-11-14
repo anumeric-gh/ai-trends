@@ -1,0 +1,247 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                  AI TRENDS AGENT — QUICKSTART GUIDE                          ║
+║                    Phase 1 (Demo) + Phase 2 (Production)                     ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+WHAT YOU HAVE:
+═════════════════════════════════════════════════════════════════════════════
+
+✅ PHASE 1 — Working Prototype (Demo)
+   • dashboard.html               — Interactive dashboard (fully working)
+   • ai_trends_report.json        — Sample data with scoring
+   • generate_demo_report.py      — Script to generate sample data
+
+   Demo features: 5 sample items, scoring, commercial flags, filters all work
+
+✅ PHASE 2 — Production System (Ready to Deploy)
+   • ai_trends_production.py      — Real data collection + scoring
+   • requirements.txt             — Dependencies (3 packages)
+   • .github_workflows_ai_trends.yml — GitHub Actions automation
+
+   Production features:
+   - Collects from 8 RSS feeds + Hacker News API
+   - Scores with Claude API (batches for cost efficiency)
+   - Detects commercial bias automatically
+   - Runs weekly (or whenever you want)
+
+✅ DOCUMENTATION
+   • README_PRODUCTION.md         — Full guide (features, scoring, examples)
+   • SETUP.md                     — Deployment instructions (3 options)
+   • DEPLOY_CHECKLIST.md          — Step-by-step to get it running
+   • This file                    — You are here
+
+
+RUNNING LOCALLY (5 min):
+═════════════════════════════════════════════════════════════════════════════
+
+  pip install -r requirements.txt
+  export ANTHROPIC_API_KEY="sk-ant-..."
+  python ai_trends_production.py
+  open dashboard.html
+
+Expected: ~12-20 items scored, commercial intent flagged on 2-4
+
+
+DEPLOYING TO PRODUCTION (Choose One):
+═════════════════════════════════════════════════════════════════════════════
+
+Option A: GitHub + Netlify (EASIEST, 1 hour, fully automated)
+  1. Push code to GitHub
+  2. Add 3 secrets (API key, Netlify token, Netlify site ID)
+  3. Move .github_workflows_ai_trends.yml to .github/workflows/
+  4. Done — runs every Sunday 6 PM UTC automatically
+  → See SETUP.md "Option A: GitHub + Netlify"
+
+Option B: AWS Lambda (45 min, serverless, reliable)
+  1. Create Lambda function, add environment variables
+  2. Add EventBridge trigger (cron schedule)
+  3. Upload zip with code + dependencies
+  → See SETUP.md "Option B: AWS Lambda"
+
+Option C: Local Cron (Simple, no cost, manual-ish)
+  1. Add to crontab: "0 18 * * 0 cd /path && python3 ai_trends_production.py"
+  2. Manually run `netlify deploy --prod` after each run
+  → See SETUP.md "Option C: Local Cron"
+
+
+KEY FEATURES (Already Built In):
+═════════════════════════════════════════════════════════════════════════════
+
+  🔍 BIAS DETECTION
+     Items flagged with ⚠️ if they have commercial motivation
+     Filter: "Hide Commercial Intent" removes them
+
+  🎯 THREE-VECTOR SCORING
+     Cost (35%)        — Impact on your Claude API
+     Competitive (35%) — Competitors gaining ground?
+     Expectation (30%) — Will users ask for this?
+
+  📊 TRANSPARENCY
+     Coverage breakdown by source and category
+     See what % of signal comes from each source
+     Easy to spot if dominated by one vendor
+
+  🔘 SMART FILTERS
+     By Impact: High (8+), Medium (5-7), Low (<5)
+     By Category: Model, Pricing, Research, Tools, Regulation, Safety
+     By Bias: Hide/Show commercial items
+
+  📈 FULLY AUTOMATED
+     Zero manual work after setup
+     Runs weekly, publishes to dashboard
+     Archives historical data for trends
+
+
+CUSTOMIZATION (After Initial Setup):
+═════════════════════════════════════════════════════════════════════════════
+
+  SOURCES:   Edit SOURCES dict in ai_trends_production.py
+  WEIGHTS:   Adjust cost/competitive/expectation percentages
+  KEYWORDS:  Modify commercial_keywords to catch different bias
+  SCHEDULE:  Change cron from "Sunday 6 PM" to whatever you want
+
+
+FILES EXPLAINED:
+═════════════════════════════════════════════════════════════════════════════
+
+  ai_trends_production.py
+    └─ Main agent: collects RSS/HN → scores with Claude → generates JSON
+
+  dashboard.html
+    └─ Interactive web page: reads JSON, shows with filters & explanations
+
+  ai_trends_report.json
+    └─ Output: 5-20 items per week with scores, reasoning, commercial flags
+
+  requirements.txt
+    └─ 3 packages: anthropic, requests, feedparser
+
+  .github_workflows_ai_trends.yml
+    └─ GitHub Actions automation: runs weekly, commits output, deploys
+
+  SETUP.md
+    └─ Detailed deployment guide for each option
+
+  README_PRODUCTION.md
+    └─ Full documentation: features, scoring, examples, troubleshooting
+
+  DEPLOY_CHECKLIST.md
+    └─ Step-by-step checklist for each deployment path
+
+
+COST BREAKDOWN:
+═════════════════════════════════════════════════════════════════════════════
+
+  Per Week:
+    Claude API:  ~$0.02  (10-20 items × batch scoring)
+    Netlify:     $0.00   (free tier)
+    GitHub:      $0.00   (included)
+    Total:       ~$0.02
+
+  Per Year:
+    ~$1 in API costs
+
+
+NEXT STEPS:
+═════════════════════════════════════════════════════════════════════════════
+
+  1. CHOOSE: Which deployment option appeals to you?
+     A (GitHub+Netlify) — Easiest, no manual work after setup
+     B (Lambda)         — Most reliable, serverless
+     C (Local cron)     — Simplest setup, some manual work
+
+  2. TEST: Try running locally first
+     python ai_trends_production.py
+
+  3. DEPLOY: Follow DEPLOY_CHECKLIST.md for your chosen option
+
+  4. VERIFY: Check that:
+     - Report generates with no errors
+     - Dashboard loads and shows items
+     - Commercial flags appear on right items
+     - Filters work
+
+  5. REFINE: After 2-3 weeks, review:
+     - Are items you acted on scoring high?
+     - Adjust weights if needed
+     - Add/remove sources based on signal quality
+
+  6. MAINTAIN: Monitor once per week
+     - Items published Sunday?
+     - Dashboard updating?
+     - Any outlier scores to understand?
+
+
+TROUBLESHOOTING:
+═════════════════════════════════════════════════════════════════════════════
+
+  "Could not resolve authentication method"
+    → Set ANTHROPIC_API_KEY environment variable
+    → echo $ANTHROPIC_API_KEY to verify
+
+  "No items found"
+    → RSS feeds might be down temporarily
+    → Check internet connection
+    → Try running again in 5 minutes
+
+  "Scoring takes too long"
+    → Normal, Claude API is slow for 20+ items
+    → Lambda timeout is 60 seconds (usually enough)
+    → Local runs can take 2-5 minutes
+
+  "Dashboard not updating after deploy"
+    → Check GitHub Actions logs for errors
+    → Verify NETLIFY_SITE_ID is correct
+    → Try manual: netlify deploy --prod
+
+  See SETUP.md for more troubleshooting.
+
+
+QUESTIONS?
+═════════════════════════════════════════════════════════════════════════════
+
+  How often does it run?
+    → Weekly by default (every Sunday 6 PM UTC)
+    → Can change to daily if you prefer
+
+  What if I want to add more sources?
+    → Edit SOURCES dict in ai_trends_production.py
+    → Add RSS feed URL or implement custom collection
+
+  What if I only care about competitive threats?
+    → Increase competitive weight from 35% to 50% in calculate_final_score()
+    → Dashboard filters let you hide other categories
+
+  How long until I see first results?
+    → Local: 2-5 minutes to score 12-20 items
+    → GitHub/Lambda: Runs automatically next Sunday (or manually trigger)
+
+  Can I share the dashboard?
+    → Yes, give them the Netlify URL (it's public)
+    → They'll see all items + filters work
+
+
+START HERE:
+═════════════════════════════════════════════════════════════════════════════
+
+  Option 1 (Fastest):
+    See it working locally in 5 minutes:
+    → python ai_trends_production.py
+    → open dashboard.html
+
+  Option 2 (Production Ready):
+    Set up fully automated weekly runs:
+    → Follow DEPLOY_CHECKLIST.md Option A (1 hour)
+
+  Option 3 (Just Want to Understand):
+    Read the docs:
+    → README_PRODUCTION.md (overview)
+    → SETUP.md (details)
+
+═════════════════════════════════════════════════════════════════════════════
+
+You're all set! This is a fully functional, bias-aware AI trends system.
+
+Next question: Which deployment option works best for your setup?
+
+═════════════════════════════════════════════════════════════════════════════

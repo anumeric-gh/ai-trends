@@ -1,0 +1,139 @@
+{
+  "week": "2026-11-10",
+  "generated_at": "2026-11-14T14:03:37.563574",
+  "summary": {
+    "total_items": 5,
+    "avg_score": 7.2,
+    "commercial_intent_items": 2,
+    "top_category": "model_release",
+    "top_source": "Anthropic",
+    "note": "Items flagged with \u26a0\ufe0f have commercial motivation. Filter them out for unbiased view."
+  },
+  "coverage_breakdown": {
+    "by_source": {
+      "Anthropic": 1,
+      "OpenAI Blog": 1,
+      "The Verge": 1,
+      "ArXiv": 1,
+      "Reuters": 1
+    },
+    "by_category": {
+      "model_release": 2,
+      "tool_launch": 1,
+      "research": 1,
+      "regulation": 1
+    }
+  },
+  "items": [
+    {
+      "title": "OpenAI Announces GPT-4.5 with Reasoning",
+      "source": "OpenAI Blog",
+      "url": "https://openai.com/blog/gpt-4-5",
+      "date": "2026-11-12T14:03:37.563600",
+      "summary": "New GPT-4.5 model with extended thinking and 128K context. Try it free with signup.",
+      "days_old": 2,
+      "scores": {
+        "cost_score": 4,
+        "competitive_score": 5,
+        "expectation_score": 5,
+        "category": "model_release",
+        "reasoning": "Significant competitive threat. Customer expectation to support reasoning. Commercial signup language present."
+      },
+      "final_score": 8.3,
+      "commercial_intent": {
+        "has_commercial_intent": true,
+        "severity": "medium",
+        "beneficiary": "OpenAI",
+        "note": "\u26a0\ufe0f Source appears to have commercial motivation"
+      }
+    },
+    {
+      "title": "Claude 4.1 Released with Extended Context",
+      "source": "Anthropic",
+      "url": "https://www.anthropic.com/news/claude-4-1",
+      "date": "2026-11-13T14:03:37.563607",
+      "summary": "Anthropic announces Claude 4.1 with 200K context window and improved reasoning capabilities.",
+      "days_old": 1,
+      "scores": {
+        "cost_score": 5,
+        "competitive_score": 3,
+        "expectation_score": 4,
+        "category": "model_release",
+        "reasoning": "Direct impact on Meevo's core capability. Users will expect features built on this. Neutral announcement from official channel."
+      },
+      "final_score": 7.9,
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      }
+    },
+    {
+      "title": "Google Releases Gemini 3 with Agentic Capabilities",
+      "source": "The Verge",
+      "url": "https://www.theverge.com/ai/2026/11/13/gemini-3",
+      "date": "2026-11-11T14:03:37.563609",
+      "summary": "Google's new Gemini 3 can plan multi-step tasks autonomously. Industry analysts say competitors must match features.",
+      "days_old": 3,
+      "scores": {
+        "cost_score": 2,
+        "competitive_score": 5,
+        "expectation_score": 4,
+        "category": "tool_launch",
+        "reasoning": "High competitive threat. Users will ask about agent capabilities. Less direct impact on Meevo's Claude dependency."
+      },
+      "final_score": 6.7,
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      }
+    },
+    {
+      "title": "New Research: Efficient LLM Fine-tuning Techniques",
+      "source": "ArXiv",
+      "url": "https://arxiv.org/abs/2311.00000",
+      "date": "2026-11-10T14:03:37.563611",
+      "summary": "Researchers publish breakthrough in parameter-efficient fine-tuning. 50% less compute required. Could change fine-tuning economics.",
+      "days_old": 4,
+      "scores": {
+        "cost_score": 3,
+        "competitive_score": 1,
+        "expectation_score": 2,
+        "category": "research",
+        "reasoning": "Interesting for future cost optimization. Low immediate impact. Academic source, unbiased."
+      },
+      "final_score": 4.3,
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      }
+    },
+    {
+      "title": "EU Proposes AI Regulation Framework",
+      "source": "Reuters",
+      "url": "https://www.reuters.com/technology/eu-ai-2026/",
+      "date": "2026-11-09T14:03:37.563614",
+      "summary": "European Union proposes mandatory safety audits for large language models by 2027. Compliance implications.",
+      "days_old": 5,
+      "scores": {
+        "cost_score": 2,
+        "competitive_score": 1,
+        "expectation_score": 3,
+        "category": "regulation",
+        "reasoning": "Important for compliance. Low competitive impact. May affect all players equally."
+      },
+      "final_score": 3.8,
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      }
+    }
+  ]
+}
