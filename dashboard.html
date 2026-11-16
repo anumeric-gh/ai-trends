@@ -550,10 +550,20 @@
             ]
         };
 
-        // Load data
-        function loadData() {
+        // Load data: try the live report first, fall back to embedded demo
+        // data (e.g. when opened directly as a file:// URL where fetch is blocked).
+        async function loadData() {
+            let data;
             try {
-                const data = demoData;
+                const response = await fetch('ai_trends_report.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('report not found');
+                data = await response.json();
+            } catch (error) {
+                console.warn('Falling back to demo data:', error);
+                data = demoData;
+            }
+
+            try {
                 allItems = data.items;
 
                 populateStats(data.summary, data.coverage_breakdown);
@@ -564,7 +574,7 @@
                 document.getElementById('generatedTime').textContent =
                     new Date(data.generated_at).toLocaleDateString();
             } catch (error) {
-                console.error('Error loading data:', error);
+                console.error('Error rendering data:', error);
                 document.getElementById('itemsContainer').innerHTML =
                     '<div class="empty-state">⚠️ Could not load data. Make sure ai_trends_report.json is in the same directory.</div>';
             }
