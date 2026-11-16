@@ -1,6 +1,6 @@
 {
   "week": "2026-11-16",
-  "generated_at": "2026-11-16T16:13:03.928889",
+  "generated_at": "2026-11-16T16:20:43.395528",
   "summary": {
     "total_items": 14,
     "avg_score": 3.6,
@@ -32,7 +32,7 @@
       "competitive_score": 2,
       "expectation_score": 2,
       "category": "research",
-      "reasoning": "The paper shows that hard-deleting 'stale' facts from agent memory can hurt accuracy when the resolver misclassifies query-critical facts. Meevo can use this directly when designing its own memory layer over Claude, for example by preferring soft filtering over hard deletion. It does not affect Claude API pricing or capabilities, and users will not expect anything from it.",
+      "reasoning": "This paper finds that hard-deleting facts judged stale can hurt agent accuracy when the staleness resolver makes mistakes. That bears on how Meevo designs its memory and context for persistent business assistants, for example by preferring soft filtering over hard deletion. It does not change Claude API pricing or capabilities, and customers will not ask for it directly, though they do expect reliable recall.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -52,7 +52,7 @@
       "competitive_score": 2,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "LoRA adapter routing applies to teams that fine-tune open-weight models, which Meevo cannot do on the Claude API. Competitors built on open-weight models could gain some cheaper customization, but the advantage is marginal and indirect, and Meevo users will not notice it.",
+      "reasoning": "The paper proposes a way to route requests among a growing pool of LoRA adapters without retraining. That applies to teams fine-tuning open-weight models, not to Meevo, which relies on the Claude API. It could marginally help competitors building specialized open-model stacks, but it has no effect on Claude pricing or on what users expect.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -72,27 +72,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is a 2007 hardware troubleshooting article about ThinkPad laptops with no AI connection. It has no bearing on Claude API pricing or capabilities, competitor positioning, or Meevo user expectations. 'Research' is the closest available category, though none fit well.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 3.5
-    },
-    {
-      "title": "How to make almost anything",
-      "source": "Hacker News",
-      "url": "https://pub.cba.mit.edu/863.26/site/",
-      "date": "Mon, 16 Nov 2026 05:50:37 +0000",
-      "summary": "<a href=\"https://news.ycombinator.com/item?id=50514470\">Comments</a>",
-      "cost_score": 1,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "research",
-      "reasoning": "This is the course site for MIT's digital fabrication class (MAS.863), focused on physical making and prototyping rather than AI. It does not affect Claude API economics, the competitive landscape for business AI assistants, or what Meevo customers expect.",
+      "reasoning": "This is a 2007 hardware troubleshooting tip for ThinkPad laptops, unrelated to AI or LLMs. It has no bearing on Claude API pricing or capabilities, the competitive landscape, or what Meevo users will expect. The category is a closest-fit label only, since the item is not AI news.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -112,7 +92,27 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is a consumer-advocacy investigation into misleading Amazon holiday pricing, unrelated to AI models or tooling. At most it is tangential context for retail-focused users interested in price monitoring, but it creates no direct impact on cost, competition, or feature expectations for Meevo.",
+      "reasoning": "This consumer advocacy investigation into misleading retail pricing on Amazon has no AI component. It does not affect Claude API costs or capabilities, and no Meevo competitor gains from it. At most it hints at a niche price-verification use case for business assistants, which is too weak to affect customer expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "How to make almost anything",
+      "source": "Hacker News",
+      "url": "https://pub.cba.mit.edu/863.26/site/",
+      "date": "Mon, 16 Nov 2026 05:50:37 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50514470\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is the course site for MIT's digital fabrication class, covering hands-on making with tools like 3D printers and CNC machines. It does not touch on LLM pricing, capabilities, or competitors. It has no implications for Meevo's product or users.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -132,7 +132,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "safety",
-      "reasoning": "This is a browser-extension security vulnerability disclosure, relevant to general web security but not to AI models or the Claude API. It may serve as a general reminder about XSS risks in any browser-based components Meevo ships, but it does not shift competitive dynamics or customer expectations.",
+      "reasoning": "This is a browser extension security vulnerability unrelated to AI models or the Claude API. It is a useful general reminder about browser-side attack surfaces for any web-based product. It does not change costs, competitive positioning, or user expectations for Meevo.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -152,7 +152,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This appears to be a blog investigation into an obscure, randomly named domain, likely related to web infrastructure or tracking. The title and summary show no AI connection, so there is no apparent impact on Claude API costs, competitors, or Meevo user expectations.",
+      "reasoning": "This appears to be a blog investigation into an obscure domain, likely related to tracking or web infrastructure. There is no indication of AI or LLM relevance. It has no measurable impact on Meevo's cost structure, competitors, or customer expectations.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -172,7 +172,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "benchmark",
-      "reasoning": "This audit covers hallucination detectors on small, quantized on-device models such as Phi-3-mini and Gemma-2-2B, not frontier API models like Claude. Its findings do not transfer to Meevo's stack, and it gives competitors no meaningful advantage.",
+      "reasoning": "The audit covers hallucination detectors on small, quantized, on-device models such as Phi-3-mini and Gemma-2-2B. Meevo runs on a hosted frontier API, so the findings don't apply to its stack. Competitors gain no meaningful edge in business assistants, and customers will not expect anything new from it.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -192,7 +192,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is clinical RAG research on medication prediction from electronic health records, outside Meevo's general business assistant use case. Its general lesson, that retrieval works better when the retrieved items match the prediction target, has little practical bearing on Meevo's product or competitive position.",
+      "reasoning": "This is clinical RAG research on predicting medications from electronic health records, which falls outside Meevo's business-assistant domain. Its general point, that what you retrieve should match the shape of the task, is a minor design idea for structured-data workflows. It has no direct impact on cost, competition, or customer expectations.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -212,7 +212,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "safety",
-      "reasoning": "This is safety and interpretability research on how much reasoning a model can do without showing it in its chain of thought. It could eventually influence how frontier labs, including Anthropic, design future model architectures. It has no near-term effect on Claude API costs, competition, or what Meevo users expect.",
+      "reasoning": "The paper proposes a way to measure how much reasoning a model can do without showing it in its chain of thought, as a proxy for how monitorable that reasoning is. It is relevant to frontier labs like Anthropic and could shape future model architectures over the long term. It has no near-term effect on Claude API pricing, competitors, or Meevo users.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -227,12 +227,12 @@
       "source": "Hacker News",
       "url": "https://xenaproject.wordpress.com/2026/11/12/and-the-proof-is-checked-in-lean/",
       "date": "2026-11-16T07:38:19",
-      "summary": "Trending on HN (172 points, 63 comments)",
+      "summary": "Trending on HN (178 points, 66 comments)",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is a mathematics blog post about how to read claims that a proof was formally verified in Lean. It may touch on AI-generated proofs, but it has no bearing on Claude API pricing or capabilities. It also gives competitors no advantage and creates no expectations among Meevo's business users.",
+      "reasoning": "This is a mathematics blog post about how to read claims of formal verification in the Lean proof assistant. Lean matters to some AI-for-math research, but this piece is about proof-checking practice, not model capabilities or pricing. It has no meaningful bearing on Claude API costs, competitors, or what business assistant users expect.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -247,12 +247,12 @@
       "source": "Hacker News",
       "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
       "date": "2026-11-16T00:21:54",
-      "summary": "Trending on HN (211 points, 55 comments)",
+      "summary": "Trending on HN (213 points, 55 comments)",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "safety",
-      "reasoning": "This is a network security patch for Tor and is unrelated to AI models or the Claude API. It offers general security awareness at most and does not affect Meevo's costs, competitive position, or customer expectations.",
+      "reasoning": "This is a network security patch for the Tor anonymity network in response to a DDoS attack. It is unrelated to AI models, Claude API pricing, or capabilities. It gives competitors no advantage and creates no new expectations for Meevo's business users.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -267,12 +267,12 @@
       "source": "Hacker News",
       "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
       "date": "2026-11-15T18:23:21",
-      "summary": "Trending on HN (279 points, 163 comments)",
+      "summary": "Trending on HN (280 points, 162 comments)",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is an educational video about climate science with no connection to AI. It has no impact on Claude API economics, the competitive landscape, or what Meevo users expect.",
+      "reasoning": "This is an educational climate science video about El Ni\u00f1o with no AI component. It does not affect Claude API costs or capabilities, the competitive landscape, or what customers expect from a business AI assistant.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -292,7 +292,7 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "tool_launch",
-      "reasoning": "This is a hobbyist browser-based flight simulator using procedural terrain generation and is not an AI product. It has no relevance to Meevo's business AI assistant platform, its costs, or its competitors.",
+      "reasoning": "This is a browser-based hobby flight simulator using procedurally generated terrain, a graphics and web development showcase. It has no connection to LLM pricing, competing AI assistant platforms, or features business users would expect in Meevo.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
