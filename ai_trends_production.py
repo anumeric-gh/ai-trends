@@ -7,7 +7,8 @@ Detects commercial bias. Generates dashboard data.
 
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from typing import Optional, List
 import requests
 import anthropic
@@ -159,8 +160,12 @@ Only return JSON, no other text."""
                 messages=[{"role": "user", "content": prompt}]
             )
 
-            # Parse response
-            result_text = response.content[0].text.strip()
+            # Parse response (skip any thinking blocks, find the text block)
+            text_blocks = [block.text for block in response.content if block.type == "text"]
+            if not text_blocks:
+                print(f"⚠️  No text block in Claude response")
+                continue
+            result_text = text_blocks[0].strip()
 
             # Extract JSON from response (in case there's surrounding text)
             try:
@@ -239,6 +244,42 @@ def extract_beneficiary(title: str, source: str) -> Optional[str]:
     return None
 
 
+def parse_item_date(date_str: str) -> Optional[datetime]:
+    """
+    Parse a date string from RSS (RFC 822, e.g. 'Mon, 16 Nov 2026 11:39:31 +0000')
+    or ISO 8601 (e.g. '2026-11-16T11:39:31+00:00'). Returns a timezone-aware
+    datetime, or None if it can't be parsed.
+    """
+    if not date_str:
+        return None
+
+    # Try RFC 822 first (standard RSS pubDate format)
+    try:
+        dt = parsedate_to_datetime(date_str)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except (TypeError, ValueError):
+        pass
+
+    # Fall back to ISO 8601
+    try:
+        dt = datetime.fromisoformat(date_str.replace('Z', '+00:00'))
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt
+    except ValueError:
+        return None
+
+
+def calculate_days_old(item: dict) -> int:
+    """Calculate how many days old an item is, defaulting to 0 if unparseable."""
+    item_date = parse_item_date(item.get("date", ""))
+    if item_date is None:
+        return 0
+    return max(0, (datetime.now(timezone.utc) - item_date).days)
+
+
 def calculate_final_score(item: dict) -> float:
     """Calculate composite impact score."""
 
@@ -246,18 +287,16 @@ def calculate_final_score(item: dict) -> float:
     competitive = item.get("competitive_score", 2)
     expectation = item.get("expectation_score", 2)
 
-    base_score = (cost * 0.35 + competitive * 0.35 + expectation * 0.30) * 10
+    # Weights sum to 1.0 and each score is 1-5, so the weighted average is in
+    # [1, 5]; scale by 2 to map onto a 0-10 display range.
+    base_score = (cost * 0.35 + competitive * 0.35 + expectation * 0.30) * 2
 
-    # Parse date and calculate freshness
-    try:
-        item_date = datetime.fromisoformat(item["date"].replace('Z', '+00:00'))
-        days_old = (datetime.now(item_date.tzinfo) - item_date).days
-    except:
-        days_old = 0
+    # Small freshness nudge (max +1.5 for brand new, decaying to 0 over ~1 week)
+    # so recency can break ties without dominating the content score.
+    days_old = calculate_days_old(item)
+    freshness_boost = max(0, 1.5 - (days_old * 0.2))
 
-    freshness_boost = max(0, 10 - (days_old * 0.33))
-
-    return round(base_score + freshness_boost, 1)
+    return round(min(10, base_score + freshness_boost), 1)
 
 
 def process_items(raw_items: List[dict]) -> List[dict]:
@@ -271,10 +310,8 @@ def process_items(raw_items: List[dict]) -> List[dict]:
     # Add commercial detection
     for item in scored_items:
         item["commercial_intent"] = detect_commercial_intent(item)
+        item["days_old"] = calculate_days_old(item)
         item["final_score"] = calculate_final_score(item)
-        item["days_old"] = (datetime.now() - datetime.fromisoformat(
-            item["date"].replace('Z', '+00:00')
-        )).days if "date" in item else 0
 
     # Sort by score
     scored_items.sort(key=lambda x: x.get("final_score", 0), reverse=True)
