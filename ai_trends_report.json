@@ -1,139 +1,306 @@
 {
-  "week": "2026-11-10",
-  "generated_at": "2026-11-14T14:03:37.563574",
+  "week": "2026-11-16",
+  "generated_at": "2026-11-16T16:13:03.928889",
   "summary": {
-    "total_items": 5,
-    "avg_score": 7.2,
-    "commercial_intent_items": 2,
-    "top_category": "model_release",
-    "top_source": "Anthropic",
+    "total_items": 14,
+    "avg_score": 3.6,
+    "commercial_intent_items": 0,
+    "top_category": "research",
+    "top_source": "Hacker News",
     "note": "Items flagged with \u26a0\ufe0f have commercial motivation. Filter them out for unbiased view."
   },
   "coverage_breakdown": {
     "by_source": {
-      "Anthropic": 1,
-      "OpenAI Blog": 1,
-      "The Verge": 1,
-      "ArXiv": 1,
-      "Reuters": 1
+      "ArXiv AI": 5,
+      "Hacker News": 9
     },
     "by_category": {
-      "model_release": 2,
-      "tool_launch": 1,
-      "research": 1,
-      "regulation": 1
+      "research": 9,
+      "safety": 3,
+      "benchmark": 1,
+      "tool_launch": 1
     }
   },
   "items": [
     {
-      "title": "OpenAI Announces GPT-4.5 with Reasoning",
-      "source": "OpenAI Blog",
-      "url": "https://openai.com/blog/gpt-4-5",
-      "date": "2026-11-12T14:03:37.563600",
-      "summary": "New GPT-4.5 model with extended thinking and 128K context. Try it free with signup.",
-      "days_old": 2,
-      "scores": {
-        "cost_score": 4,
-        "competitive_score": 5,
-        "expectation_score": 5,
-        "category": "model_release",
-        "reasoning": "Significant competitive threat. Customer expectation to support reasoning. Commercial signup language present."
-      },
-      "final_score": 8.3,
-      "commercial_intent": {
-        "has_commercial_intent": true,
-        "severity": "medium",
-        "beneficiary": "OpenAI",
-        "note": "\u26a0\ufe0f Source appears to have commercial motivation"
-      }
-    },
-    {
-      "title": "Claude 4.1 Released with Extended Context",
-      "source": "Anthropic",
-      "url": "https://www.anthropic.com/news/claude-4-1",
-      "date": "2026-11-13T14:03:37.563607",
-      "summary": "Anthropic announces Claude 4.1 with 200K context window and improved reasoning capabilities.",
-      "days_old": 1,
-      "scores": {
-        "cost_score": 5,
-        "competitive_score": 3,
-        "expectation_score": 4,
-        "category": "model_release",
-        "reasoning": "Direct impact on Meevo's core capability. Users will expect features built on this. Neutral announcement from official channel."
-      },
-      "final_score": 7.9,
+      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.17338",
+      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.17338v1 Announce Type: new \nAbstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater d",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 2,
+      "category": "research",
+      "reasoning": "The paper shows that hard-deleting 'stale' facts from agent memory can hurt accuracy when the resolver misclassifies query-critical facts. Meevo can use this directly when designing its own memory layer over Claude, for example by preferring soft filtering over hard deletion. It does not affect Claude API pricing or capabilities, and users will not expect anything from it.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
-      }
+      },
+      "days_old": 0,
+      "final_score": 4.8
     },
     {
-      "title": "Google Releases Gemini 3 with Agentic Capabilities",
-      "source": "The Verge",
-      "url": "https://www.theverge.com/ai/2026/11/13/gemini-3",
-      "date": "2026-11-11T14:03:37.563609",
-      "summary": "Google's new Gemini 3 can plan multi-step tasks autonomously. Industry analysts say competitors must match features.",
-      "days_old": 3,
-      "scores": {
-        "cost_score": 2,
-        "competitive_score": 5,
-        "expectation_score": 4,
-        "category": "tool_launch",
-        "reasoning": "High competitive threat. Users will ask about agent capabilities. Less direct impact on Meevo's Claude dependency."
-      },
-      "final_score": 6.7,
+      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.17340",
+      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.17340v1 Announce Type: new \nAbstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "LoRA adapter routing applies to teams that fine-tune open-weight models, which Meevo cannot do on the Claude API. Competitors built on open-weight models could gain some cheaper customization, but the advantage is marginal and indirect, and Meevo users will not notice it.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
-      }
+      },
+      "days_old": 0,
+      "final_score": 4.2
     },
     {
-      "title": "New Research: Efficient LLM Fine-tuning Techniques",
-      "source": "ArXiv",
-      "url": "https://arxiv.org/abs/2311.00000",
-      "date": "2026-11-10T14:03:37.563611",
-      "summary": "Researchers publish breakthrough in parameter-efficient fine-tuning. 50% less compute required. Could change fine-tuning economics.",
-      "days_old": 4,
-      "scores": {
-        "cost_score": 3,
-        "competitive_score": 1,
-        "expectation_score": 2,
-        "category": "research",
-        "reasoning": "Interesting for future cost optimization. Low immediate impact. Academic source, unbiased."
-      },
-      "final_score": 4.3,
+      "title": "The Secret ThinkPad Powerbutton Code to Bring Dead Laptops Back to Life (2007)",
+      "source": "Hacker News",
+      "url": "https://masnick.com/posts/the-secret-thinkpad-powerbutton-code-to-bring-dead-laptops-back-to-life/",
+      "date": "Mon, 16 Nov 2026 11:39:31 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50516473\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is a 2007 hardware troubleshooting article about ThinkPad laptops with no AI connection. It has no bearing on Claude API pricing or capabilities, competitor positioning, or Meevo user expectations. 'Research' is the closest available category, though none fit well.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
-      }
+      },
+      "days_old": 0,
+      "final_score": 3.5
     },
     {
-      "title": "EU Proposes AI Regulation Framework",
-      "source": "Reuters",
-      "url": "https://www.reuters.com/technology/eu-ai-2026/",
-      "date": "2026-11-09T14:03:37.563614",
-      "summary": "European Union proposes mandatory safety audits for large language models by 2027. Compliance implications.",
-      "days_old": 5,
-      "scores": {
-        "cost_score": 2,
-        "competitive_score": 1,
-        "expectation_score": 3,
-        "category": "regulation",
-        "reasoning": "Important for compliance. Low competitive impact. May affect all players equally."
-      },
-      "final_score": 3.8,
+      "title": "How to make almost anything",
+      "source": "Hacker News",
+      "url": "https://pub.cba.mit.edu/863.26/site/",
+      "date": "Mon, 16 Nov 2026 05:50:37 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50514470\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is the course site for MIT's digital fabrication class (MAS.863), focused on physical making and prototyping rather than AI. It does not affect Claude API economics, the competitive landscape for business AI assistants, or what Meevo customers expect.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
-      }
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Many of Amazon\u2019s Black Friday and Cyber Monday \u201cDeals\u201d Offered No Savings",
+      "source": "Hacker News",
+      "url": "http://groundworkcollaborative.org/news/amazons-decoy-deals-groundwork-investigation-reveals-nearly-1-in-3-black-friday-and-cyber-monday-deals-advertised-by-amazon-offered-no-savings-to-shoppers-nearly-1-in-10-w/",
+      "date": "Mon, 16 Nov 2026 13:39:07 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50517488\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is a consumer-advocacy investigation into misleading Amazon holiday pricing, unrelated to AI models or tooling. At most it is tangential context for retail-focused users interested in price monitoring, but it creates no direct impact on cost, competition, or feature expectations for Meevo.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Universal XSS in uBlock Origin from website-driven element picker",
+      "source": "Hacker News",
+      "url": "https://iter.ca/post/ubo-uxss/",
+      "date": "Mon, 16 Nov 2026 02:04:48 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50513160\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "This is a browser-extension security vulnerability disclosure, relevant to general web security but not to AI models or the Claude API. It may serve as a general reminder about XSS risks in any browser-based components Meevo ships, but it does not shift competitive dynamics or customer expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "What is w2rt6byl5nf1opmc-a.com?",
+      "source": "Hacker News",
+      "url": "https://jack.cab/blog/siterate",
+      "date": "Mon, 16 Nov 2026 13:51:38 +0000",
+      "summary": "<a href=\"https://news.ycombinator.com/item?id=50517602\">Comments</a>",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This appears to be a blog investigation into an obscure, randomly named domain, likely related to web infrastructure or tracking. The title and summary show no AI connection, so there is no apparent impact on Claude API costs, competitors, or Meevo user expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.17339",
+      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.17339v1 Announce Type: new \nAbstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "benchmark",
+      "reasoning": "This audit covers hallucination detectors on small, quantized on-device models such as Phi-3-mini and Gemma-2-2B, not frontier API models like Claude. Its findings do not transfer to Meevo's stack, and it gives competitors no meaningful advantage.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Tabular Population Priors as Structured Retrieval for EHR Medication Set Prediction",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.17341",
+      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.17341v1 Announce Type: new \nAbstract: Medication prediction from electronic health records is a fixed vocabulary structured prediction problem, yet recent clinical RAG systems often treat it like open ended case based reasoning: retrieve similar patient admissions and ask an LLM to infer a medication set. This retrieval object is indirect the model receives retrieved patient records while the target is a discrete set of medication class labels. We propose a more task aligned retrieval",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is clinical RAG research on medication prediction from electronic health records, outside Meevo's general business assistant use case. Its general lesson, that retrieval works better when the retrieved items match the prediction target, has little practical bearing on Meevo's product or competitive position.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "An Operationalization of Opaque Serial Depth",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.17495",
+      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.17495v1 Announce Type: new \nAbstract: Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of opaque serial depth: roughly, the length of the longest path through a model's computation that does not pass through an interpreta",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "This is safety and interpretability research on how much reasoning a model can do without showing it in its chain of thought. It could eventually influence how frontier labs, including Anthropic, design future model architectures. It has no near-term effect on Claude API costs, competition, or what Meevo users expect.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Interpreting claims that a theorem is correct because it was checked in Lean",
+      "source": "Hacker News",
+      "url": "https://xenaproject.wordpress.com/2026/11/12/and-the-proof-is-checked-in-lean/",
+      "date": "2026-11-16T07:38:19",
+      "summary": "Trending on HN (172 points, 63 comments)",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is a mathematics blog post about how to read claims that a proof was formally verified in Lean. It may touch on AI-generated proofs, but it has no bearing on Claude API pricing or capabilities. It also gives competitors no advantage and creates no expectations among Meevo's business users.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Tor Project Issues Rapid-Response DoS-Defense Fix Amid Sustained DDoS Attack",
+      "source": "Hacker News",
+      "url": "https://forum.torproject.org/t/security-release-0-4-9-17/22454",
+      "date": "2026-11-16T00:21:54",
+      "summary": "Trending on HN (211 points, 55 comments)",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "This is a network security patch for Tor and is unrelated to AI models or the Claude API. It offers general security awareness at most and does not affect Meevo's costs, competitive position, or customer expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "A short explainer on how El Ni\u00f1o works [video]",
+      "source": "Hacker News",
+      "url": "https://www.youtube.com/watch?v=7_JF3etiAv8",
+      "date": "2026-11-15T18:23:21",
+      "summary": "Trending on HN (279 points, 163 comments)",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is an educational video about climate science with no connection to AI. It has no impact on Claude API economics, the competitive landscape, or what Meevo users expect.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "WebGL Flight Simulator with seed generated terrain",
+      "source": "Hacker News",
+      "url": "https://baron.by.dai.studio/",
+      "date": "2026-11-15T20:20:05",
+      "summary": "Trending on HN (214 points, 52 comments)",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "tool_launch",
+      "reasoning": "This is a hobbyist browser-based flight simulator using procedural terrain generation and is not an AI product. It has no relevance to Meevo's business AI assistant platform, its costs, or its competitors.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
     }
   ]
 }
