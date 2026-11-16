@@ -7,6 +7,7 @@ Detects commercial bias. Generates dashboard data.
 
 import json
 import os
+import re
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 from typing import Optional, List
@@ -15,16 +16,19 @@ import anthropic
 import feedparser
 
 # Configuration
+# Verified working feeds (checked directly with feedparser). Anthropic has no
+# public RSS feed; its news is covered via TechCrunch/Verge/HN instead.
+# Per-source limits favor business/product/competitive news over raw
+# research papers, since research volume would otherwise dominate the feed.
 SOURCES = {
     "rss": {
-        "Anthropic": "https://www.anthropic.com/news.xml",
-        "OpenAI": "https://openai.com/feed.xml",
-        "Google DeepMind": "https://blog.research.google/feeds/",
-        "The Verge AI": "https://www.theverge.com/ai/rss/index.xml",
-        "TechCrunch AI": "https://feeds.techcrunch.com/techcrunch/ai/",
-        "Hacker News": "https://news.ycombinator.com/rss",
-        "ArXiv AI": "http://arxiv.org/rss/cs.AI",
-        "Papers with Code": "https://paperswithcode.com/rss/",
+        "OpenAI": ("https://openai.com/news/rss.xml", 5),
+        "Google DeepMind": ("https://deepmind.google/blog/rss.xml", 5),
+        "TechCrunch AI": ("https://techcrunch.com/category/artificial-intelligence/feed/", 5),
+        "MIT Tech Review AI": ("https://www.technologyreview.com/topic/artificial-intelligence/feed", 4),
+        "Ars Technica AI": ("https://arstechnica.com/tag/ai/feed/", 4),
+        "Wired AI": ("https://www.wired.com/feed/tag/ai/latest/rss", 3),
+        "ArXiv AI": ("http://arxiv.org/rss/cs.AI", 3),
     }
 }
 
@@ -34,12 +38,15 @@ def fetch_rss_feeds() -> List[dict]:
     """Fetch and parse RSS feeds from key sources."""
     items = []
 
-    for source_name, feed_url in SOURCES["rss"].items():
+    for source_name, (feed_url, limit) in SOURCES["rss"].items():
         try:
             feed = feedparser.parse(feed_url)
 
-            # Get latest 5 entries from each feed
-            for entry in feed.entries[:5]:
+            if getattr(feed, "bozo", False) and not feed.entries:
+                print(f"⚠️  {source_name} feed unreachable or malformed, skipping")
+                continue
+
+            for entry in feed.entries[:limit]:
                 item = {
                     "title": entry.get("title", ""),
                     "source": source_name,
@@ -59,6 +66,18 @@ def fetch_rss_feeds() -> List[dict]:
     return items
 
 
+AI_KEYWORD_PATTERN = re.compile(
+    r"\b("
+    r"ai|llm|gpt-?\d*|claude|chatgpt|gemini|anthropic|openai|deepmind|"
+    r"machine learning|neural network|transformer|reasoning model|"
+    r"agentic|genai|generative ai|"
+    r"qwen\d*|mistral|llama\d*|grok|xai|perplexity|midjourney|"
+    r"stability ?ai|cohere|copilot|meta ai|hugging ?face"
+    r")\b",
+    re.IGNORECASE,
+)
+
+
 def fetch_hacker_news_trending() -> List[dict]:
     """Fetch trending AI-related items from Hacker News."""
     items = []
@@ -68,16 +87,14 @@ def fetch_hacker_news_trending() -> List[dict]:
         hn_url = "https://hacker-news.firebaseio.com/v0/topstories.json"
         top_ids = requests.get(hn_url, timeout=5).json()[:30]  # Get top 30
 
-        ai_keywords = ["ai", "llm", "gpt", "claude", "model", "machine learning", "neural", "transformer", "reasoning"]
-
         for story_id in top_ids:
             try:
                 story = requests.get(f"https://hacker-news.firebaseio.com/v0/item/{story_id}.json", timeout=3).json()
 
-                title = story.get("title", "").lower()
+                title = story.get("title", "")
 
-                # Filter for AI-related stories
-                if any(keyword in title for keyword in ai_keywords):
+                # Filter for AI-related stories (whole-word match, not substring)
+                if AI_KEYWORD_PATTERN.search(title):
                     item = {
                         "title": story.get("title", ""),
                         "source": "Hacker News",
@@ -156,7 +173,7 @@ Only return JSON, no other text."""
         try:
             response = client.messages.create(
                 model="claude-opus-5-5",
-                max_tokens=1500,
+                max_tokens=3000,
                 messages=[{"role": "user", "content": prompt}]
             )
 
