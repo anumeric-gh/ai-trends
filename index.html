@@ -444,13 +444,11 @@
                     "date": new Date(Date.now() - 2*86400000).toISOString(),
                     "summary": "New GPT-4.5 model with extended thinking and 128K context. Try it free with signup.",
                     "days_old": 2,
-                    "scores": {
-                        "cost_score": 4,
-                        "competitive_score": 5,
-                        "expectation_score": 5,
-                        "category": "model_release",
-                        "reasoning": "Significant competitive threat. Customer expectation to support reasoning. Commercial signup language present."
-                    },
+                    "cost_score": 4,
+                    "competitive_score": 5,
+                    "expectation_score": 5,
+                    "category": "model_release",
+                    "reasoning": "Significant competitive threat. Customer expectation to support reasoning. Commercial signup language present.",
                     "final_score": 8.3,
                     "commercial_intent": {
                         "has_commercial_intent": true,
@@ -466,13 +464,11 @@
                     "date": new Date(Date.now() - 1*86400000).toISOString(),
                     "summary": "Anthropic announces Claude 4.1 with 200K context window and improved reasoning capabilities.",
                     "days_old": 1,
-                    "scores": {
-                        "cost_score": 5,
-                        "competitive_score": 3,
-                        "expectation_score": 4,
-                        "category": "model_release",
-                        "reasoning": "Direct impact on Meevo's core capability. Users will expect features built on this. Neutral announcement."
-                    },
+                    "cost_score": 5,
+                    "competitive_score": 3,
+                    "expectation_score": 4,
+                    "category": "model_release",
+                    "reasoning": "Direct impact on Meevo's core capability. Users will expect features built on this. Neutral announcement.",
                     "final_score": 7.9,
                     "commercial_intent": {
                         "has_commercial_intent": false,
@@ -488,13 +484,11 @@
                     "date": new Date(Date.now() - 3*86400000).toISOString(),
                     "summary": "Google's new Gemini 3 can plan multi-step tasks autonomously. Competitors must match features.",
                     "days_old": 3,
-                    "scores": {
-                        "cost_score": 2,
-                        "competitive_score": 5,
-                        "expectation_score": 4,
-                        "category": "tool_launch",
-                        "reasoning": "High competitive threat. Users will ask about agent capabilities."
-                    },
+                    "cost_score": 2,
+                    "competitive_score": 5,
+                    "expectation_score": 4,
+                    "category": "tool_launch",
+                    "reasoning": "High competitive threat. Users will ask about agent capabilities.",
                     "final_score": 6.7,
                     "commercial_intent": {
                         "has_commercial_intent": false,
@@ -510,13 +504,11 @@
                     "date": new Date(Date.now() - 4*86400000).toISOString(),
                     "summary": "Researchers publish breakthrough in parameter-efficient fine-tuning. 50% less compute required.",
                     "days_old": 4,
-                    "scores": {
-                        "cost_score": 3,
-                        "competitive_score": 1,
-                        "expectation_score": 2,
-                        "category": "research",
-                        "reasoning": "Interesting for future cost optimization. Academic source, unbiased."
-                    },
+                    "cost_score": 3,
+                    "competitive_score": 1,
+                    "expectation_score": 2,
+                    "category": "research",
+                    "reasoning": "Interesting for future cost optimization. Academic source, unbiased.",
                     "final_score": 4.3,
                     "commercial_intent": {
                         "has_commercial_intent": false,
@@ -532,13 +524,11 @@
                     "date": new Date(Date.now() - 5*86400000).toISOString(),
                     "summary": "European Union proposes mandatory safety audits for large language models by 2027.",
                     "days_old": 5,
-                    "scores": {
-                        "cost_score": 2,
-                        "competitive_score": 1,
-                        "expectation_score": 3,
-                        "category": "regulation",
-                        "reasoning": "Important for compliance. Low competitive impact."
-                    },
+                    "cost_score": 2,
+                    "competitive_score": 1,
+                    "expectation_score": 3,
+                    "category": "regulation",
+                    "reasoning": "Important for compliance. Low competitive impact.",
                     "final_score": 3.8,
                     "commercial_intent": {
                         "has_commercial_intent": false,
@@ -625,7 +615,7 @@
         }
 
         function updateCategoryFilters() {
-            const categories = [...new Set(allItems.map(item => item.scores.category))];
+            const categories = [...new Set(allItems.map(item => item.category))];
             const html = categories.map(cat =>
                 `<button class="filter-btn" onclick="filterByCategory('${cat}')">${cat.replace('_', ' ')}</button>`
             ).join('');
@@ -648,7 +638,7 @@
                 }
 
                 // Category filter
-                if (currentFilters.category && item.scores.category !== currentFilters.category) {
+                if (currentFilters.category && item.category !== currentFilters.category) {
                     return false;
                 }
 
@@ -687,15 +677,15 @@
                         <div class="item-summary">${item.summary}</div>
 
                         <div class="item-meta">
-                            <span class="category-badge">${item.scores.category.replace('_', ' ')}</span>
+                            <span class="category-badge">${(item.category || 'other').replace('_', ' ')}</span>
                             <span class="score-breakdown">
-                                <div class="score-item">Cost: <strong>${item.scores.cost_score}</strong>/5</div>
-                                <div class="score-item">Competitive: <strong>${item.scores.competitive_score}</strong>/5</div>
-                                <div class="score-item">Expectation: <strong>${item.scores.expectation_score}</strong>/5</div>
+                                <div class="score-item">Cost: <strong>${item.cost_score}</strong>/5</div>
+                                <div class="score-item">Competitive: <strong>${item.competitive_score}</strong>/5</div>
+                                <div class="score-item">Expectation: <strong>${item.expectation_score}</strong>/5</div>
                             </span>
                         </div>
 
-                        <div class="reasoning">💭 ${item.scores.reasoning}</div>
+                        <div class="reasoning">💭 ${item.reasoning || ''}</div>
 
                         <a href="${item.url}" target="_blank" class="item-link">→ Read more</a>
                     </div>
