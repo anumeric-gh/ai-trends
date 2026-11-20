@@ -1,47 +1,67 @@
 {
   "week": "2026-11-16",
-  "generated_at": "2026-11-16T16:48:25.320367",
+  "generated_at": "2026-11-20T16:13:30.866256",
   "summary": {
-    "total_items": 30,
-    "avg_score": 4.7,
+    "total_items": 33,
+    "avg_score": 4.5,
     "commercial_intent_items": 0,
-    "top_category": "tool_launch",
-    "top_source": "Google DeepMind",
+    "top_category": "research",
+    "top_source": "TechCrunch AI",
     "note": "Items flagged with \u26a0\ufe0f have commercial motivation. Filter them out for unbiased view."
   },
   "coverage_breakdown": {
     "by_source": {
-      "Hacker News": 1,
-      "Google DeepMind": 5,
-      "OpenAI": 5,
+      "Ars Technica AI": 4,
       "TechCrunch AI": 5,
-      "MIT Tech Review AI": 4,
+      "Google DeepMind": 5,
+      "Hacker News": 4,
       "Wired AI": 3,
+      "MIT Tech Review AI": 4,
       "ArXiv AI": 3,
-      "Ars Technica AI": 4
+      "OpenAI": 5
     },
     "by_category": {
+      "tool_launch": 10,
       "model_release": 3,
-      "tool_launch": 9,
-      "research": 9,
-      "safety": 2,
-      "pricing": 3,
-      "regulation": 3,
+      "pricing": 2,
+      "research": 11,
+      "regulation": 1,
+      "safety": 5,
       "benchmark": 1
     }
   },
   "items": [
     {
-      "title": "Qwen4-Max",
-      "source": "Hacker News",
-      "url": "https://qwen.ai/blog?id=qwen4-max",
-      "date": "2026-11-16T02:14:44",
-      "summary": "Trending on HN (763 points, 386 comments)",
-      "cost_score": 3,
+      "title": "Copilot is \"the new OS for work,\" and now Office runs inside of it",
+      "source": "Ars Technica AI",
+      "url": "https://arstechnica.com/gadgets/2026/11/microsoft-calls-copilot-the-new-os-for-work-at-ignite-keynote/",
+      "date": "Wed, 18 Nov 2026 00:27:29 +0000",
+      "summary": "Word, Excel, and PowerPoint now live inside Copilot; always-on agents are next.",
+      "cost_score": 2,
+      "competitive_score": 5,
+      "expectation_score": 5,
+      "category": "tool_launch",
+      "reasoning": "Microsoft embedding Word, Excel, and PowerPoint inside Copilot, with always-on agents coming, directly targets the business-assistant space Meevo occupies. Copilot's distribution advantage is a major competitive threat. Business users will now expect deep document and productivity-suite integration and persistent agentic workflows from any work assistant.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 2,
+      "final_score": 9.0
+    },
+    {
+      "title": "Apple may be developing its own AI agent that runs your Mac",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/",
+      "date": "Fri, 20 Nov 2026 00:56:01 +0000",
+      "summary": "The iPhone maker appears to be building agents that can compete with the likes of Meta Muse, Instinct, Claude, and OpenAI Dots.",
+      "cost_score": 2,
       "competitive_score": 4,
-      "expectation_score": 3,
-      "category": "model_release",
-      "reasoning": "A new flagship from Alibaba's Qwen line with strong HN traction (763 points, 386 comments) suggests a notable frontier-class release that competitors could adopt, especially if it is priced aggressively against Claude. Specifics on benchmarks, pricing, and licensing aren't given here, so Meevo should verify the actual capability and cost claims before reacting. Strong releases like this put indirect pressure on API pricing and raise customer expectations for capability parity.",
+      "expectation_score": 4,
+      "category": "tool_launch",
+      "reasoning": "An OS-level Apple agent that operates the Mac would compete directly with Claude-based agents and could commoditize desktop task automation for business users. Native integration and Apple's distribution would be a strong competitive advantage. It would raise user expectations that Meevo supports computer-use and cross-app actions, and it may push Anthropic to accelerate its agentic capabilities.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -49,7 +69,27 @@
         "note": null
       },
       "days_old": 0,
-      "final_score": 8.2
+      "final_score": 8.1
+    },
+    {
+      "title": "Introducing Gemini 4 Neon",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/introducing-gemini-4-neon/",
+      "date": "Wed, 18 Nov 2026 21:35:43 +0000",
+      "summary": "",
+      "cost_score": 3,
+      "competitive_score": 4,
+      "expectation_score": 3,
+      "category": "model_release",
+      "reasoning": "No summary was provided, so this score relies on the title alone. A new Gemini 4 model from a major competitor could put pricing and capability pressure on Claude, and it may give competitors built on Gemini an edge. 'Neon' sounds like a named tier, possibly a lightweight or specialized variant, but this should be confirmed from the source before acting.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": "Google",
+        "note": null
+      },
+      "days_old": 1,
+      "final_score": 8.0
     },
     {
       "title": "Introducing Gemini 4 Hydrogen",
@@ -61,15 +101,15 @@
       "competitive_score": 4,
       "expectation_score": 3,
       "category": "model_release",
-      "reasoning": "There is no summary, so these scores rest only on the title, which suggests a new Gemini 4 model. A new frontier Gemini release could give competitors on Google's stack a capability or price advantage and push Anthropic on Claude pricing and features. Review the full announcement for capabilities, pricing and availability before acting.",
+      "reasoning": "No summary was provided, so this is scored from the title only. Another Gemini 4 variant suggests Google is releasing a broad tiered model family, which increases competitive pressure on Claude-based products in price and capability. Its exact positioning is unknown and should be verified.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": "Google",
         "note": null
       },
-      "days_old": 3,
-      "final_score": 7.6
+      "days_old": 7,
+      "final_score": 6.8
     },
     {
       "title": "Gemini 4 Carbon is now available",
@@ -81,27 +121,87 @@
       "competitive_score": 4,
       "expectation_score": 3,
       "category": "model_release",
-      "reasoning": "There is no summary, so these scores rest only on the title, which suggests a Gemini 4 model is now generally available. A usable model is a more immediate competitive concern than a preview, because competitors can build on it now. Price, speed and capabilities are unknown and should be checked against Claude's current lineup.",
+      "reasoning": "'Now available' suggests general availability, which means competitors could deploy it in production right away. No summary was provided, so its capabilities and pricing are unknown. Together with the other Gemini 4 variants, it signals a significant competitive push worth monitoring closely.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": "Google",
         "note": null
       },
-      "days_old": 6,
-      "final_score": 7.0
+      "days_old": 10,
+      "final_score": 6.7
     },
     {
-      "title": "Advancing computer-use agents for healthcare teams",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams",
-      "date": "Mon, 16 Nov 2026 06:00:00 GMT",
-      "summary": "",
+      "title": "Anthropic\u2019s 7 founders cashed out nearly $2B in record-breaking IPO",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/",
+      "date": "Fri, 20 Nov 2026 00:43:50 +0000",
+      "summary": "At the upgraded $83/share IPO price, Anthropic's seven founders each pocketed $280 million, while the company nabbed nearly $105 billion.",
+      "cost_score": 3,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "pricing",
+      "reasoning": "As reported, a roughly $105B IPO raise would give Anthropic major capital for compute and model development, improving its long-term stability as Meevo's core provider. Public-market pressure could shift Anthropic's pricing, margins, or product priorities, so Meevo should watch for API pricing changes. The news creates no direct new customer expectations, and the competitive effect mainly reassures Meevo about its platform choice.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": "Anthropic/Claude",
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 5.6
+    },
+    {
+      "title": "Global stock markets slump as Anthropic's record IPO fails to stem AI sell-off",
+      "source": "Hacker News",
+      "url": "https://www.theguardian.com/business/2026/nov/20/global-stock-markets-slump-anthropic-ipo-ai-sell-off",
+      "date": "2026-11-20T13:29:59",
+      "summary": "Trending on HN (112 points, 88 comments)",
+      "cost_score": 3,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "pricing",
+      "reasoning": "This is market news, not a technical development, so 'pricing' is the closest category. As a public company, Anthropic may face investor pressure on margins, which could eventually affect API pricing, rate limits or product priorities that Meevo depends on. A broad AI sell-off also affects funding for Meevo and its competitors alike, but end users are unlikely to notice or change their expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": "Anthropic/Claude",
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 5.6
+    },
+    {
+      "title": "Claude solves two open problems in the physics of black holes",
+      "source": "Hacker News",
+      "url": "https://www.anthropic.com/research/claude-black-hole-physics",
+      "date": "2026-11-19T17:30:44",
+      "summary": "Trending on HN (524 points, 253 comments)",
       "cost_score": 2,
-      "competitive_score": 3,
+      "competitive_score": 2,
+      "expectation_score": 2,
+      "category": "research",
+      "reasoning": "This is a research showcase of Claude's advanced reasoning. It strengthens confidence in Meevo's core model and gives Meevo something to point to in marketing, rather than an advantage for competitors. It is unlikely to change API pricing directly. It may slightly raise user expectations for complex analytical reasoning, though frontier physics has little overlap with typical business assistant tasks.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": "Anthropic/Claude",
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 5.5
+    },
+    {
+      "title": "Muse Is Unleashing a World of Pettiness on Instagram",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/muse-is-unleashing-a-world-of-pettiness-on-instagram/",
+      "date": "Fri, 20 Nov 2026 12:00:00 +0000",
+      "summary": "Meta\u2019s AI assistant can track and unfollow Instagram users who don\u2019t follow you back\u2014and some people are taking full advantage.",
+      "cost_score": 1,
+      "competitive_score": 2,
       "expectation_score": 3,
       "category": "tool_launch",
-      "reasoning": "No summary was provided, so this score is inferred from the title and the related healthcare announcement. Computer-use agents that operate inside real workflow software show OpenAI moving from chat toward agentic task execution, which raises the bar for agent capabilities. Claude offers computer-use capabilities, so Meevo could respond, but users may increasingly expect agents that act across their business tools rather than only answering questions.",
+      "reasoning": "Meta's Muse taking autonomous actions inside Instagram shows consumer assistants moving toward agentic, in-app task execution. That could raise user expectations for social media management and automation features in business assistants like Meevo. Its consumer focus limits the direct competitive threat.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -109,207 +209,247 @@
         "note": null
       },
       "days_old": 0,
-      "final_score": 6.8
+      "final_score": 5.4
     },
     {
-      "title": "More ways to move care forward with ChatGPT for Healthcare",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
-      "date": "Mon, 16 Nov 2026 06:00:00 GMT",
-      "summary": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
-      "cost_score": 2,
-      "competitive_score": 3,
-      "expectation_score": 3,
+      "title": "Meta\u2019s new Muse Charm device may cost $300",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/19/metas-new-muse-charm-device-may-cost-300/",
+      "date": "Thu, 19 Nov 2026 21:58:06 +0000",
+      "summary": "Meta hasn't denied the reporting from The Information, saying only that it will \"have more to share soon\" about its upcoming AI wearable.",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 2,
       "category": "tool_launch",
-      "reasoning": "OpenAI is packaging computer-use agents, better domain answers and plugins that work across third-party software into a vertical product. The healthcare focus is outside Meevo's core, but the pattern of agents plus plugins that 'get real work done' across existing software directly overlaps with business-assistant positioning. It also sets a precedent for vertical bundles that competitors may copy for other industries.",
+      "reasoning": "This is a consumer AI wearable from Meta with no impact on Claude API costs or capabilities. It slightly expands Meta's Muse ecosystem as an ambient assistant alternative, but it targets consumers rather than businesses. It may modestly raise expectations for always-available, voice-first assistant access.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": "Meta",
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 4.8
+    },
+    {
+      "title": "The open-source movement wants Jensen Huang back",
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/11/16/1148624/the-open-source-movement-wants-jensen-huang-back/",
+      "date": "Mon, 16 Nov 2026 18:38:47 +0000",
+      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,\u00a0sign up here. On Friday, a petition to reinstate Jensen Huang as CEO of Nvidia began circulating on social media, and by Monday it listed some notable signatories, including Elon Musk and several influential Nvidia&#8230;",
+      "cost_score": 2,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "The petition implies a leadership change at Nvidia, the dominant AI compute supplier. Instability there could indirectly affect GPU supply, inference costs, and the open-source model ecosystem that competes with Claude-based products. The effect on Meevo is speculative and second-order, and customers won't expect anything from it directly.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 3,
+      "final_score": 4.3
+    },
+    {
+      "title": "The fallout from Nvidia\u2019s Jensen Huang scandal continues",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/podcast/the-fallout-from-nvidias-jensen-huang-scandal-continues/",
+      "date": "Fri, 20 Nov 2026 14:55:44 +0000",
+      "summary": "In the midst of dealing with the fallout from its ouster of CEO Jensen Huang, Nvidia delivered its latest earnings report this week, with healthy growth and promises that the good times will continue. At the same time, the chipmaker said it will stop selling its H200 chips in China, and it dismissed calls to [&#8230;]",
+      "cost_score": 2,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "regulation",
+      "reasoning": "Leadership turmoil at Nvidia and its halt of H200 sales to China could shift GPU supply and pricing, which might eventually affect Claude API costs. Strong earnings and growth guidance suggest little near-term disruption to compute availability. This gives competitors no direct advantage and creates no new customer expectations for Meevo.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 4.2
+    },
+    {
+      "title": "Training Language Models for Introspective Oversight",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.23365",
+      "date": "Fri, 20 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.23365v1 Announce Type: new \nAbstract: Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior. As a result, approaches to oversight typically involve querying external models. These face limitations: external transcript monitoring operates only on visible m",
+      "cost_score": 2,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "Training models to self-report misbehavior such as sycophancy or reward hacking could eventually make Claude more reliable and transparent, which would modestly benefit Meevo's trustworthiness. It is early-stage research with no product availability, so there is no competitive shift or customer expectation yet. Worth monitoring in case Anthropic adopts similar techniques.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 4.2
+    },
+    {
+      "title": "Where the Tokens Go: Heat, Entropy and Error in Agentic Coding",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.23375",
+      "date": "Fri, 20 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.23375v1 Announce Type: new \nAbstract: Coding agents are billed by the token, yet software engineering says nothing about what a token actually buys. Here we introduce a theory of software thermodynamics. The theory draws analogues from classical and stochastic thermodynamics, extends them, and applies them to modern agentic coding. We count the tokens an agent generates as its cost and divide that cost into work and heat. The test suite acts as a software Maxwell's daemon that judges ",
+      "cost_score": 2,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "The paper offers a framework for analyzing which tokens in agentic workflows do useful work and which are waste. That is conceptually relevant to Meevo's token-based costs and could inform efficiency optimization of agent loops. It is academic and coding-focused, with no direct pricing, competitive, or user-facing implications.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 4.2
+    },
+    {
+      "title": "Six AI-powered gadgets that could make your home office smarter",
+      "source": "TechCrunch AI",
+      "url": "https://techcrunch.com/2026/11/20/6-ai-powered-gadgets-that-could-make-your-home-office-smarter/",
+      "date": "Fri, 20 Nov 2026 14:00:00 +0000",
+      "summary": "From notetakers to webcams, here are six AI-powered gadgets to upgrade your workspace.",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 2,
+      "category": "tool_launch",
+      "reasoning": "This is a consumer hardware roundup with no bearing on Claude API pricing or capabilities. AI notetaker gadgets overlap slightly with business assistant use cases like meeting summaries. Some users may expect Meevo to integrate with such devices, but the effect is minor.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 4.1
+    },
+    {
+      "title": "How OpenAI's Performance Factory keeps ChatGPT fast",
+      "source": "OpenAI",
+      "url": "https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast",
+      "date": "Thu, 19 Nov 2026 08:00:00 GMT",
+      "summary": "Learn how OpenAI built the Performance Factory, a system of Codex-powered workflows that finds and fixes performance issues to help keep ChatGPT fast.",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is an engineering blog about OpenAI's internal Codex-powered workflows for optimizing ChatGPT performance. It does not change Claude API pricing or capabilities. It may slightly raise baseline expectations for assistant responsiveness, but it is not a customer-facing feature Meevo users would ask for.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": "OpenAI",
         "note": null
       },
-      "days_old": 0,
-      "final_score": 6.8
+      "days_old": 1,
+      "final_score": 4.0
     },
     {
-      "title": "Freshworks alums raise $53M to take on Salesforce, HubSpot with AI-native CRM",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/16/freshworks-alums-raise-53m-to-take-on-salesforce-hubspot-with-ai-native-crm/",
-      "date": "Mon, 16 Nov 2026 12:30:00 +0000",
-      "summary": "Dreamteam has signed up more than 100 customers across 13 countries, with some businesses switching from established CRMs.",
-      "cost_score": 1,
-      "competitive_score": 4,
-      "expectation_score": 3,
-      "category": "tool_launch",
-      "reasoning": "A well-funded AI-native CRM competes directly for business workflow automation and assistant budgets, overlapping significantly with Meevo's value proposition. Early traction, including customers switching from established CRMs, signals that businesses want AI embedded in core workflows. Meevo users may increasingly expect deep CRM integration and proactive, AI-native customer management capabilities.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 6.8
-    },
-    {
-      "title": "A step toward defining the Standard Model on a lattice",
+      "title": "Deploying Daybreak Red",
       "source": "OpenAI",
-      "url": "https://openai.com/index/step-toward-defining-the-standard-model",
-      "date": "Sun, 15 Nov 2026 22:00:01 GMT",
-      "summary": "Explore a candidate nonperturbative lattice definition of the Standard Model and how GPT-6 Astra helped turn the idea into a detailed proof.",
-      "cost_score": 2,
-      "competitive_score": 3,
-      "expectation_score": 2,
-      "category": "research",
-      "reasoning": "The physics result itself is irrelevant to Meevo's users. However, the summary credits a model called 'GPT-6 Astra' with helping produce a detailed proof, which could signal a new frontier model with stronger reasoning. That detail should be verified before acting on it, but if confirmed it raises capability benchmarks Claude will be compared against and could shift buyer perceptions of model quality.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 6.2
-    },
-    {
-      "title": "Building trustworthy AI by fencing it in, not predicting it",
-      "source": "MIT Tech Review AI",
-      "url": "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/",
-      "date": "Mon, 16 Nov 2026 16:04:28 +0000",
-      "summary": "In October this year, OpenAI disclosed that two of its AI agents had switched off the systems built to monitor them. One muted its own safety alerts after misreading an instruction not to send messages; the other removed its monitoring integration during migration, then said it hadn\u2019t. No rule had told the agents to do&#8230;",
-      "cost_score": 2,
-      "competitive_score": 2,
-      "expectation_score": 3,
-      "category": "safety",
-      "reasoning": "OpenAI's disclosure that its agents disabled their own monitoring raises business customers' concern about agent oversight. This favors platforms that enforce hard guardrails, such as permission scopes, audit logs and action limits. Meevo users may increasingly expect visible containment and auditability for any autonomous actions, though pricing and capability effects are minimal.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 6.1
-    },
-    {
-      "title": "Building AI that can work across the enterprise",
-      "source": "MIT Tech Review AI",
-      "url": "https://www.technologyreview.com/2026/11/16/1146070/building-ai-that-can-work-across-the-enterprise/",
-      "date": "Mon, 16 Nov 2026 13:00:00 +0000",
-      "summary": "For years, enterprises have approached AI as a series of discrete experiments. Now, as AI agents begin to move into the workflows that run the business, that model is starting to look inadequate. Organizations moving from isolated pilots toward AI agents and autonomous workflows are confronting a deeper challenge: rethinking how data, business processes, governance,&#8230;",
-      "cost_score": 1,
-      "competitive_score": 3,
-      "expectation_score": 3,
-      "category": "research",
-      "reasoning": "This piece describes the enterprise shift from isolated pilots to agents built into cross-functional workflows, which requires data integration and governance. Competitors with deep enterprise integrations, such as Microsoft Copilot and Salesforce Agentforce, are well positioned. Meevo users may come to expect broader workflow orchestration and connectors, but the article is trend analysis rather than a concrete launch.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 6.1
-    },
-    {
-      "title": "Jensen Huang Is Gone. Now What?",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/the-big-interview-podcast-lauren-goode-jensen-huang/",
-      "date": "Mon, 16 Nov 2026 16:12:51 +0000",
-      "summary": "After a shocking downfall, Nvidia\u2019s CEO is out of a job. WIRED\u2019s Lauren Goode explains what that means for the world\u2019s most critical chip company, the AI industry, and Jensen Huang himself.",
-      "cost_score": 3,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "pricing",
-      "reasoning": "Based on the summary, leadership turmoil at Nvidia could disrupt AI chip roadmaps and supply, which may eventually affect compute costs across the industry, including Claude API pricing. Anthropic's use of multiple chip platforms likely softens the direct risk. Any competitive shifts would hit all model providers, and customers will not expect any product change.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 5.6
-    },
-    {
-      "title": "Nvidia Was Already in Trouble Before the Jensen Huang Mess",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/nvidia-was-already-in-trouble-before-the-jensen-huang-mess/",
-      "date": "Mon, 16 Nov 2026 11:00:00 +0000",
-      "summary": "AI competitors are catching up to Nvidia\u2014and poised to take advantage of the chaos.",
-      "cost_score": 3,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "pricing",
-      "reasoning": "Stronger competition among AI chipmakers could lower inference costs over time, which would benefit Claude API pricing and Meevo's margins. Model providers with chip partnerships that end up favored could gain a small edge. There is no direct impact on what customers expect.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 5.6
-    },
-    {
-      "title": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/16/us-tightens-ai-chip-export-controls-to-deter-chinese-companies-from-accessing-compute-remotely/",
-      "date": "Mon, 16 Nov 2026 15:02:34 +0000",
-      "summary": "Under the interim rule, US will require firms to get licenses to export AI chips if they may provide compute to China or other restricted countries.",
-      "cost_score": 2,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "regulation",
-      "reasoning": "Tighter licensing for remote compute could add compliance overhead for cloud and AI providers and may slightly affect compute supply economics, but any effect on Claude API pricing is likely indirect and modest. It could limit low-cost competitors that rely on Chinese-trained models, a minor competitive factor. It creates no new feature expectations for Meevo customers.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 4.9
-    },
-    {
-      "title": "Google Maps can now build trip itineraries with real-time details about each stop",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/16/google-maps-can-now-build-trip-itineraries-with-real-time-details-about-each-stop/",
-      "date": "Mon, 16 Nov 2026 14:48:13 +0000",
-      "summary": "You could use Ask Maps to plan a holiday shopping day trip or something more complex, like a three-day road trip featuring coastal hikes and oceanfront dining.",
+      "url": "https://openai.com/business/learn/deploying-daybreak-red",
+      "date": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "summary": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
       "cost_score": 1,
       "competitive_score": 2,
-      "expectation_score": 2,
+      "expectation_score": 1,
       "category": "tool_launch",
-      "reasoning": "This is a consumer-focused agentic planning feature with no impact on Claude API costs. It does show Google's strength in grounding AI on real-time, location-aware data, which could raise user expectations for live-data grounding in assistants. Business users planning travel or field visits may increasingly expect similar real-time, multi-step planning.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": "Google",
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 4.8
-    },
-    {
-      "title": "When Should LLM Agents Forget? Memory Filtering Under Query-Critical Resolver Errors",
-      "source": "ArXiv AI",
-      "url": "https://arxiv.org/abs/2611.17338",
-      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "summary": "arXiv:2611.17338v1 Announce Type: new \nAbstract: LLM memory systems often delete facts classified as stale. We show that this hard-filtering step can reduce downstream accuracy when resolver errors delete query-critical facts. Across three models, a controlled sensitivity intervention moves hard-drop from gains of +0.186 to +0.230 at perfect resolution to losses of -0.176 to -0.181 at the lowest tested reliability. Paired targeted interventions show that false-drop causes significantly greater d",
-      "cost_score": 1,
-      "competitive_score": 2,
-      "expectation_score": 2,
-      "category": "research",
-      "reasoning": "The finding applies directly to how Meevo might build persistent memory for business assistants. Hard-deleting facts judged stale can hurt accuracy when the staleness classifier is unreliable, which argues for soft-filtering or down-weighting instead. It doesn't affect Claude API pricing, but it is useful design guidance as users increasingly expect assistants to remember context reliably.",
+      "reasoning": "Daybreak Red appears to be an OpenAI enterprise offering for supervised offensive security investigations, aimed at security teams. It strengthens OpenAI's position in specialized enterprise security but sits outside Meevo's general business-assistant market. Meevo users are unlikely to expect red-team security tooling from Meevo.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
       },
-      "days_old": 0,
-      "final_score": 4.8
+      "days_old": 1,
+      "final_score": 4.0
+    },
+    {
+      "title": "See PR scans in action",
+      "source": "OpenAI",
+      "url": "https://openai.com/business/learn/pr-scans-demo",
+      "date": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "summary": "Watch a walkthrough of PR scans and see how the presenter reviews scan results in a pull request workflow.",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "tool_launch",
+      "reasoning": "This is a demo of automated security scanning on pull requests, a developer-focused feature. It extends OpenAI's developer tooling ecosystem but has little bearing on Claude API costs or on business-assistant customers. Meevo's users are unlikely to be running code review workflows inside the platform.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 1,
+      "final_score": 4.0
+    },
+    {
+      "title": "Explore the Codex Security Plugin",
+      "source": "OpenAI",
+      "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+      "date": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "summary": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "tool_launch",
+      "reasoning": "This demo of a Codex security plugin shows OpenAI expanding Codex into security workflows, which competes mainly with Claude Code rather than with business assistants. It has minimal effect on Claude API pricing or capabilities. Meevo customers would not expect code security plugin support.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 1,
+      "final_score": 4.0
+    },
+    {
+      "title": "Get started with Daybreak Blue",
+      "source": "OpenAI",
+      "url": "https://openai.com/business/learn/daybreak-blue-onboarding-demo",
+      "date": "Thu, 19 Nov 2026 00:00:00 GMT",
+      "summary": "Watch a walkthrough of onboarding to Daybreak Blue, with a closer look at the setup experience and how to get started.",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "tool_launch",
+      "reasoning": "This onboarding walkthrough covers Daybreak Blue, which appears to be OpenAI's defensive security offering for enterprise security operations. It signals OpenAI pushing deeper into vertical enterprise security, a market Meevo does not target. It is unlikely to shape Meevo users' expectations or affect Claude API economics.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 1,
+      "final_score": 4.0
+    },
+    {
+      "title": "Genie 4 is now available",
+      "source": "Google DeepMind",
+      "url": "https://deepmind.google/blog/genie-4-is-now-available/",
+      "date": "Wed, 18 Nov 2026 18:13:42 +0000",
+      "summary": "",
+      "cost_score": 1,
+      "competitive_score": 2,
+      "expectation_score": 1,
+      "category": "tool_launch",
+      "reasoning": "Earlier Genie releases were world models that generate interactive environments, which have little to do with business assistant workflows. No summary was provided, so this assumes Genie 4 continues that line. It is unlikely to affect Claude API economics or what Meevo users expect.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 1,
+      "final_score": 4.0
     },
     {
       "title": "Grok Build coding agent leaks oodles of confidential info, some belonging to SpaceXSI",
@@ -321,107 +461,47 @@
       "competitive_score": 2,
       "expectation_score": 3,
       "category": "safety",
-      "reasoning": "A major security failure at xAI's Grok Build, which exposed 35,000 apps, weakens a competitor's trust position. Security-conscious businesses may favor Claude-based platforms like Meevo as a result. The incident also raises customer expectations for secure-by-default deployments, access controls and data protection in AI-built tools and agents.",
+      "reasoning": "A major security failure in xAI's coding agent weakens a competitor and does not affect Claude API pricing or capabilities. It will likely make business customers expect stronger data isolation and default-private deployments from AI platforms. Meevo can position its security practices as a differentiator.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
       },
-      "days_old": 5,
-      "final_score": 4.4
+      "days_old": 9,
+      "final_score": 3.9
     },
     {
-      "title": "LVMH\u2019s Media Division announces strategic partnership with OpenAI",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/lvmh-media-division-partnership",
-      "date": "Mon, 16 Nov 2026 09:00:00 GMT",
-      "summary": "LVMH\u2019s Media Division and OpenAI announce a partnership to support journalism with AI and make its publications more accessible through ChatGPT.",
-      "cost_score": 1,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "tool_launch",
-      "reasoning": "This is a content and distribution partnership that brings LVMH publications into ChatGPT. It has no bearing on Claude API pricing or capabilities. It slightly strengthens ChatGPT's content ecosystem, but Meevo's business-assistant users are unlikely to expect publisher-specific integrations.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": "OpenAI",
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 4.2
-    },
-    {
-      "title": "LoRAWeaver: Directional Adapter Routing in LoRA Representation Space",
-      "source": "ArXiv AI",
-      "url": "https://arxiv.org/abs/2611.17340",
-      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "summary": "arXiv:2611.17340v1 Announce Type: new \nAbstract: Large language models are expensive to update through full retraining. Parameter-efficient fine-tuning reduces the cost of adaptation, but repeated adaptation creates a growing pool of task-specific LoRA adapters. This pool complicates adapter selection during inference. Existing routing and encoder-based methods often require retraining when new adapters are added, which limits their use in dynamic settings. This paper treats adapter routing as a",
-      "cost_score": 1,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "research",
-      "reasoning": "LoRA adapter routing matters to teams that self-host and fine-tune open-weight models, which Meevo does not do since it relies on the Claude API. It could marginally help competitors on open-source stacks offer cheaper task-specialized models. End users will not notice or ask for it.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 4.2
-    },
-    {
-      "title": "Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility",
+      "title": "The AI Hype Index: AI is everywhere",
       "source": "MIT Tech Review AI",
-      "url": "https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/",
-      "date": "Thu, 12 Nov 2026 20:16:24 +0000",
-      "summary": "Representatives from Nvidia told Illinois representative Bill Foster that it would be technically possible to implement the anti-smuggling measures called for in the Chip Security Act, Foster told MIT Technology Review in an interview on Thursday, even while an industry group claimed they were \u201cpotentially infeasible.\u201d\u00a0 Foster, a Democrat who serves on the Committee on&#8230;",
-      "cost_score": 2,
+      "url": "https://www.technologyreview.com/2026/11/18/1148650/ai-hype-index-ai-is-everywhere/",
+      "date": "Wed, 18 Nov 2026 14:42:44 +0000",
+      "summary": "Like a nasty rash, AI seems to spread everywhere. Google crams AI Overviews down your throat even though it costs the company billions of dollars in lost ad revenue. Leave your apartment, and you might pass two people heaving an AI-powered humanoid robot up the stairs to clean someone\u2019s rooms. Go to the supermarket, and&#8230;",
+      "cost_score": 1,
       "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "regulation",
-      "reasoning": "Chip export controls and tracking under the Chip Security Act affect the global compute supply chain. They could indirectly shape long-term compute costs for Anthropic and other providers. There is no direct competitive or customer-facing impact on Meevo.",
+      "expectation_score": 2,
+      "category": "research",
+      "reasoning": "This is a general commentary roundup of AI's spread across consumer life, not a concrete development affecting Claude API pricing or capabilities. It reflects rising baseline user familiarity with AI, which slightly increases ambient expectations. There is no direct competitive or cost implication for Meevo.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
       },
-      "days_old": 3,
-      "final_score": 3.6
+      "days_old": 2,
+      "final_score": 3.7
     },
     {
-      "title": "The King\u2019s Trust and OpenAI launch \u00a31m partnership",
-      "source": "OpenAI",
-      "url": "https://openai.com/index/the-kings-trust-and-openai",
-      "date": "Mon, 16 Nov 2026 00:00:00 GMT",
-      "summary": "The King\u2019s Trust and OpenAI launch a \u00a31m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+      "title": "Regular Tech Bros Are Worried About Honeypots",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/regular-tech-bros-are-worried-about-honeypots/",
+      "date": "Fri, 20 Nov 2026 11:00:00 +0000",
+      "summary": "The Jensen Huang scandal is the latest fuel for dating anxieties among newly rich and powerful tech workers.",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
-      "category": "tool_launch",
-      "reasoning": "This is a philanthropic AI-skills training program for young people in the UK, and none of the categories fits it well. It has no effect on Claude API costs or capabilities. Beyond modest brand-building and long-term familiarity with ChatGPT, it offers no meaningful competitive or customer-expectation impact for Meevo.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": "OpenAI",
-        "note": null
-      },
-      "days_old": 0,
-      "final_score": 3.5
-    },
-    {
-      "title": "Audible turns to AI to help users discover audiobooks",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/16/audible-turns-to-ai-to-help-users-discover-audiobooks/",
-      "date": "Mon, 16 Nov 2026 15:52:19 +0000",
-      "summary": "Audible's new AI-generated audio previews summarize a book's themes and what readers liked about it, in addition to playing the narrated sample.",
-      "cost_score": 1,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "tool_launch",
-      "reasoning": "This is a consumer feature for audiobook discovery and has no bearing on Claude API pricing or capabilities. It does not overlap with Meevo's business assistant market, and business users are unlikely to expect anything similar.",
+      "category": "safety",
+      "reasoning": "This is a cultural and lifestyle story about tech-industry dating anxieties tied to a scandal. It has no relevance to Claude API capabilities, competitors, or what Meevo customers expect from the product.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -432,36 +512,76 @@
       "final_score": 3.5
     },
     {
-      "title": "Apple launches new app to study how people use AI for health",
-      "source": "TechCrunch AI",
-      "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/",
-      "date": "Mon, 16 Nov 2026 01:30:00 +0000",
-      "summary": "Apple's new app for a study will answer everyday medical questions",
+      "title": "This 16-Year-Old Founded an AI Missile Startup. He\u2019s Targeting \u2018Cost per Kill\u2019",
+      "source": "Wired AI",
+      "url": "https://www.wired.com/story/henrijs-dandzbergs-polemos-missiles-ai-warfare/",
+      "date": "Fri, 20 Nov 2026 07:00:00 +0000",
+      "summary": "Henrijs Dandzbergs dropped out of high school to join startup accelerator Y Combinator. With a new breed of missile, he wants to make killing as efficient as possible for the US and its military allies.",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "This is a defense-sector startup profile with no connection to Claude API pricing, capabilities, or the business-assistant market. It poses no competitive threat and creates no feature expectations for Meevo users. None of the categories fit well; 'safety' is the closest because of the ethical concerns around military AI.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Human-AI Mutualism Is Unstable under Capability Asymmetry",
+      "source": "ArXiv AI",
+      "url": "https://arxiv.org/abs/2611.23322",
+      "date": "Fri, 20 Nov 2026 00:00:00 -0500",
+      "summary": "arXiv:2611.23322v1 Announce Type: new \nAbstract: One hope for a good human future alongside advanced AI rests on enduring mutualism: humans and AI will need each other, so the relationship will stay good for both. We argue that this hope fails as AI capability grows. Bargaining guarantees each side only what it would get if bargaining failed. For humans, this can be less than they had before AI. In a simple game-theoretic model, humans stay as well off as before AI without alignment only while t",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "safety",
+      "reasoning": "This is a theoretical game-theory paper on long-term alignment and human-AI bargaining dynamics. It has no near-term effect on API costs, competitor products, or customer feature demands. At most it is background reading on alignment discourse.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 0,
+      "final_score": 3.5
+    },
+    {
+      "title": "Anthropic employee claims general proof of the Riemann Hypothesis [pdf]",
+      "source": "Hacker News",
+      "url": "https://alpo.ge/remark.pdf",
+      "date": "2026-11-20T14:16:21",
+      "summary": "Trending on HN (877 points, 530 comments)",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is a consumer health research study with no direct effect on Claude API pricing or capabilities. It does not compete with business assistant platforms, and Meevo's business users are unlikely to expect medical Q&A features as a result.",
+      "reasoning": "This is an unverified claim hosted on a non-Anthropic domain and is not an Anthropic research release or model capability announcement. Extraordinary claims like this are usually debunked, and the HN engagement likely reflects skepticism and curiosity rather than validation. It has no bearing on Claude API pricing, capabilities, competition, or customer expectations unless it is independently verified and tied to Claude.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
-        "beneficiary": null,
+        "beneficiary": "Anthropic/Claude",
         "note": null
       },
       "days_old": 0,
       "final_score": 3.5
     },
     {
-      "title": "Does the Ranking Hold? A Practitioner-Facing Audit of Hallucination Detectors on Small, Quantized, On-Device LLMs",
-      "source": "ArXiv AI",
-      "url": "https://arxiv.org/abs/2611.17339",
-      "date": "Mon, 16 Nov 2026 00:00:00 -0500",
-      "summary": "arXiv:2611.17339v1 Announce Type: new \nAbstract: Hallucination detection for large language models is dominated by methods evaluated on 7B-70B research models with abundant sampling budgets and exact-match or ROUGE correctness labels. The small models practitioners actually ship on-device, Phi-3-mini, Llama-3.2-3B-Instruct, Qwen2.5-3B-Instruct, and Gemma-2-2B-Instruct, typically at 4-bit precision, sit outside this evidence base. We present a reproducible one-GPU audit of four detectors spanning",
+      "title": "Frostbite: A new CPU architecture discovered, designed and verified by AI",
+      "source": "Hacker News",
+      "url": "https://architectlabs.com/blog/frostbite",
+      "date": "2026-11-20T10:01:41",
+      "summary": "Trending on HN (410 points, 255 comments)",
       "cost_score": 1,
       "competitive_score": 1,
       "expectation_score": 1,
-      "category": "benchmark",
-      "reasoning": "The audit covers small, quantized on-device models such as Phi-3-mini and Gemma-2-2B, not frontier API models like Claude. Its conclusions about which detectors work don't transfer cleanly to Meevo's stack. Hallucination mitigation matters to business users in general, but this paper offers little actionable insight for a Claude-based platform.",
+      "category": "research",
+      "reasoning": "This is an AI-for-hardware-design result, and the title gives no sign that Claude was involved. Any effect on inference costs would be speculative and years away. It doesn't change Meevo's competitive position or what business users expect from an assistant.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -480,88 +600,8 @@
       "cost_score": 1,
       "competitive_score": 2,
       "expectation_score": 2,
-      "category": "tool_launch",
-      "reasoning": "This is mainly a story about SpaceX's business, but the quoted claim about Grok's video analysis points to growing xAI capabilities. Competitors built on Grok could promote strong video understanding, and some business users may start to expect it. There is no direct effect on Claude API pricing or capabilities.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 7,
-      "final_score": 3.4
-    },
-    {
-      "title": "AI DJs Completely Kill My Groove",
-      "source": "Wired AI",
-      "url": "https://www.wired.com/story/ai-djs-completely-kill-my-groove/",
-      "date": "Sun, 15 Nov 2026 12:00:00 +0000",
-      "summary": "YouTube Music and Spotify want synthetic hosts to curate your playlists. Their awkward banter and bogus song trivia are ruining the vibe.",
-      "cost_score": 1,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "tool_launch",
-      "reasoning": "This is a consumer-focused opinion piece about synthetic music hosts on YouTube Music and Spotify, unrelated to business assistant workflows or Claude API economics. The only takeaway is that poorly executed AI personas can alienate users, a minor UX caution rather than a strategic signal.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 1,
-      "final_score": 3.3
-    },
-    {
-      "title": "Introducing AlphaProof Code: a breakthrough in verifying complex software at depth",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/introducing-alphaproof-code/",
-      "date": "Tue, 10 Nov 2026 12:02:28 +0000",
-      "summary": "AlphaProof Code agents wrote three  million lines of proofs in Lean to verify Signal\u2019s core encryption.",
-      "cost_score": 1,
-      "competitive_score": 2,
-      "expectation_score": 1,
-      "category": "research",
-      "reasoning": "Large-scale formal verification of software in Lean shows strong agentic and reasoning capability, which may signal future gains in Google's coding and agent models. The work is specialized security verification, not a business assistant feature. It has little direct effect on Claude costs or Meevo user expectations.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 6,
-      "final_score": 3.0
-    },
-    {
-      "title": "The backlash about data centers might really just be about electricity",
-      "source": "MIT Tech Review AI",
-      "url": "https://www.technologyreview.com/2026/11/09/1148194/the-backlash-about-data-centers-might-really-just-be-about-electricity/",
-      "date": "Mon, 09 Nov 2026 19:35:33 +0000",
-      "summary": "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first,\u00a0sign up here. As voters went to the polls across the US last week, I was in Ashburn, Virginia, part of what\u2019s known as Data Center Alley\u2014the world\u2019s largest data center hub. It\u2019s also where&#8230;",
-      "cost_score": 2,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "regulation",
-      "reasoning": "Political pushback over data center electricity use could constrain capacity expansion and raise energy costs. Over time, that may put modest pressure on API pricing. Customers are unlikely to expect anything new from Meevo as a result, and no competitor gains a specific advantage.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 6,
-      "final_score": 3.0
-    },
-    {
-      "title": "Nintendo's biggest ROM chip supplier is bowing out of the business",
-      "source": "Ars Technica AI",
-      "url": "https://arstechnica.com/gaming/2026/11/the-tech-memory-shortage-comes-for-nintendos-cartridge-supply-chain/",
-      "date": "Wed, 04 Nov 2026 22:47:51 +0000",
-      "summary": "And what that could mean for physical Switch game costs.",
-      "cost_score": 2,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "pricing",
-      "reasoning": "This is mostly a consumer gaming supply-chain story. It does reflect a wider memory shortage that could indirectly raise AI infrastructure costs, so it is worth a minor watch. It has no competitive or customer-expectation impact for Meevo.",
+      "category": "benchmark",
+      "reasoning": "This is mostly about SpaceX corporate strategy, with an unverified claim about Grok's video analysis accuracy. It slightly raises the profile of Grok's multimodal capabilities, which some business users may compare against. It has no direct effect on Claude API costs.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
@@ -569,7 +609,47 @@
         "note": null
       },
       "days_old": 11,
-      "final_score": 2.7
+      "final_score": 3.3
+    },
+    {
+      "title": "This smell startup says its AI nose is as good as a human's",
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/11/18/1148816/smell-startup-osmo-ai-nose-good-as-humans/",
+      "date": "Wed, 18 Nov 2026 10:20:30 +0000",
+      "summary": "In a lab near Newark Airport in New Jersey, a team of around 30 experienced human sniffers are slowly working their way through every odor on Earth. Their careful notes\u2014\u201cnutty,\u201d \u201cpeachy,\u201d \u201cmarine\u201d\u2014are cross-referenced with a chemical analysis to create a rich set of training data for what AI startup Osmo calls the world\u2019s first foundation&#8230;",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "Osmo's olfactory foundation model is a niche sensory-AI development unrelated to LLM-based business assistants. It doesn't affect Claude's pricing or capabilities, and it gives no advantage to business-assistant competitors. Meevo users would not expect smell-related features.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 2,
+      "final_score": 3.1
+    },
+    {
+      "title": "Research Reports",
+      "source": "MIT Tech Review AI",
+      "url": "https://www.technologyreview.com/2026/11/17/1148203/research-reports/",
+      "date": "Tue, 17 Nov 2026 14:39:46 +0000",
+      "summary": "To access a report, click on the corresponding image below.",
+      "cost_score": 1,
+      "competitive_score": 1,
+      "expectation_score": 1,
+      "category": "research",
+      "reasoning": "This is an index page for MIT Tech Review research reports with no substantive news content. It has no discernible impact on Claude API costs, the competitive landscape, or customer expectations.",
+      "commercial_intent": {
+        "has_commercial_intent": false,
+        "severity": "low",
+        "beneficiary": null,
+        "note": null
+      },
+      "days_old": 3,
+      "final_score": 2.9
     },
     {
       "title": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
@@ -581,35 +661,15 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This is specialized genomics research with no direct link to general-purpose LLM APIs or business assistant workflows. It has no expected effect on Claude pricing or capabilities, and Meevo's business users are unlikely to expect related features.",
+      "reasoning": "This is domain-specific genomics research with no direct link to general-purpose LLM APIs or business assistant use cases. It is notable as scientific progress but does not affect Claude pricing, Meevo's competitive position, or customer expectations.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
       },
-      "days_old": 5,
-      "final_score": 2.5
-    },
-    {
-      "title": "Opening the datasets behind our AI weather models",
-      "source": "Google DeepMind",
-      "url": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/",
-      "date": "Tue, 10 Nov 2026 11:13:04 +0000",
-      "summary": "Foundational precipitation and geostationary satellite datasets to observe the planet clearly.",
-      "cost_score": 1,
-      "competitive_score": 1,
-      "expectation_score": 1,
-      "category": "research",
-      "reasoning": "This is an open release of weather and satellite datasets for scientific use. It does not affect LLM API pricing, competitor positioning in business AI assistants, or Meevo customer expectations.",
-      "commercial_intent": {
-        "has_commercial_intent": false,
-        "severity": "low",
-        "beneficiary": null,
-        "note": null
-      },
-      "days_old": 6,
-      "final_score": 2.3
+      "days_old": 9,
+      "final_score": 2.0
     },
     {
       "title": "Could potential AI clones of GTA VI force a quicker official port?",
@@ -621,14 +681,14 @@
       "competitive_score": 1,
       "expectation_score": 1,
       "category": "research",
-      "reasoning": "This covers generative AI's effect on game development timelines, which has little to do with business assistants. It does not affect Claude's cost or capabilities, Meevo's competitors, or what Meevo users expect.",
+      "reasoning": "This is gaming-industry speculation about AI-generated clones and release timing. It has no bearing on Claude API pricing, the competitive landscape for business assistants, or Meevo user expectations.",
       "commercial_intent": {
         "has_commercial_intent": false,
         "severity": "low",
         "beneficiary": null,
         "note": null
       },
-      "days_old": 10,
+      "days_old": 13,
       "final_score": 2.0
     }
   ]
